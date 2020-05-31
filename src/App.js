@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import axios from 'axios'
+import { API_KEY, BASE_URL, MOVIES, FILTERS } from './utils/api'
+import Header from './containers/Header/Header';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Header />
+  )
+
 }
 
+
 export default App;
+
+
+// const parameters =  [16, 18]
+
+// axios.get(`${BASE_URL}${MOVIES}${API_KEY}${FILTERS}
+// `, {
+//   params: {
+//     with_genres: parameters.join(',')
+//   }
+// }
+// )
