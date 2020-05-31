@@ -4,5 +4,6 @@ export const BASE_URL = 'https://api.themoviedb.org/3'
 
 export const MOVIES  = '/discover/movie'
 
+export const GENRES = '/genre/movie/list'
 
 export const FILTERS = '&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'

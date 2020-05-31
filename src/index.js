@@ -6,14 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-// import rootReducer from './reducers/rootReducer'
+import rootReducer from './redux/reducers/rootReducer'
 
 const rootEl = document.getElementById('root')
 
-// const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 const app = (
-  // <Provider store={store}>
+  <Provider store={store}>
     <App />
   // </Provider>
 )
