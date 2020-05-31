@@ -5,13 +5,18 @@ import './App.css';
 import { API_KEY, BASE_URL, MOVIES, FILTERS } from './utils/api'
 import Header from './containers/Header/Header';
 import Movies from './containers/Movies/Movies';
+import Filters from './containers/Filters/Filters';
 
 const App = () => {
   return (
     <>
     <Header />
+    <div style={{display: 'flex' }}>
     <Movies />
+    <Filters />
+    </div>
     </>
+    
   )
 
 }

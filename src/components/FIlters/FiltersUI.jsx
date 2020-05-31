@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Filters.scss'
 
-const FiltersUI = ({ genres, getGenreId}) => {
+const FiltersUI = ({ genres, getGenreHandler, with_genres}) => {
 
     return (
         <div
@@ -17,8 +17,9 @@ const FiltersUI = ({ genres, getGenreId}) => {
                             className={`filters__items`}>
                             <input
                                 
-                                // onChange={() => getGenreId(item.id)}
-                                // value={[with_genres, movies].includes(item.id)}
+                                onChange={event => getGenreHandler(item.id, event)}
+                                // checked={with_genres.filter(genre => genre !== item.id)}
+                                // value={with_genres.includes(item.id)}
                                 id={`${item.id}`}
                                 type="checkbox" />
                             <label

@@ -10,3 +10,8 @@ export const movieSelector = createSelector(
         return movies
     }
 )
+
+// export const filterMovieSelector = createSelector(
+//     movieState,
+//     (movies)
+// )

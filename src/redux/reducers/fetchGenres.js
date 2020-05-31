@@ -3,20 +3,20 @@ import { FETCH_GENRES_START, FETCH_GENRES_SUCCESS, FETCH_GENRES_ERROR } from "..
 const initialState = {
     genres: [],
     isLoading: false,
-    error: false
+    error: null
 }
 
-const moviesReduer = (state = initialState, action) => {
+const genresReduer = (state = initialState, action) => {
     switch(action.type) {
         case FETCH_GENRES_START:
             return {isLoading: true}
         case FETCH_GENRES_SUCCESS:
             return { isLoading: false, genres: action.payload  }
         case FETCH_GENRES_ERROR:
-        return {error: true}
+        return {error: action.payload}
         default:
             return state
     }
 }
 
-export default moviesReduer
+export default genresReduer
