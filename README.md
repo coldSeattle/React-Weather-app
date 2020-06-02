@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -71,3 +72,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 # Weather-React-app
 Enter City Name and get the current weather information
 >>>>>>> 2981f3d207ce92d248bc21e2c669997c47356678
+=======
+# react-weather-app.github.io
+>>>>>>> 6867da1e0f643686836234408044648b25947c0f
