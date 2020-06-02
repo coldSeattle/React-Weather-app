@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // const process = require('process');
 import './App.scss'
-import axios from 'axios'
 import { CallAPI, ACCESS_KEY } from './utils/api'
 import WeatherUI from './Weather/WeatherUI';
 

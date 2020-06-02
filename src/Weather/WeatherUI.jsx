@@ -12,7 +12,7 @@ const WeatherUI = ({ Weather }) => {
                 <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>local time: </p>{Weather && Weather[0].location.localtime}</li>
                 <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>UTC: </p>{Weather && Weather[0].location.utc_offset}</li>
                 <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>Temperature: </p>{Weather && Weather[0].current.temperature} C</li>
-                <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>Weather: </p>{Weather && (<img src={Weather[0].current.weather_icons[0]} />)}</li>
+                <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>Weather: </p>{Weather && (<img alt={`weather icon`} src={Weather[0].current.weather_icons[0]} />)}</li>
                 <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>Weather description: </p>{Weather && Weather[0].current.weather_descriptions[0]}</li>
                 <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>Wind speed: </p>{Weather && Weather[0].current.wind_speed} km/hour</li>
                 <li className={`wheather__item`}><p className={`wheather__item-title item__title`}>Wind dir: </p>{Weather && Weather[0].current.wind_dir}</li>
