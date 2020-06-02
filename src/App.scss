@@ -1,0 +1,131 @@
+$fontF: 'Roboto', sans-serif;
+$border: 3px solid black;
+
+* {
+    font-family: $fontF;
+}
+
+.app {
+    width: calc(100vw - 30px);
+    height: calc(100vh - 100px);
+    /* transform: translate(-50%, -50%); */
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: $border;
+    background-color: #8e28ed;
+
+    &__title {
+        text-align: center;
+        color: #c8c8c8;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+
+    // &__form-input {
+        
+    // }
+
+    &__form-button {
+            width: 300px;
+            height: 40px;
+            border: 1px white solid;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background: transparent;
+            color: white;
+    }
+    
+    &__form-button:hover {
+        color: darken($color: #8fa2b1, $amount: 0);
+        border: 1px solid darken($color: #8fa2b1, $amount: 0)
+    }
+}
+
+
+
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+//   width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+  left: 0;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;
+    background: transparent;
+    left: 0;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+body {
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color:#222222;
+}

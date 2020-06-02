@@ -1,9 +1,10 @@
-export const API_KEY = '?api_key=603e4a7abc2dc73842e2ef6783d15a88'
+import axios from 'axios'
 
-export const BASE_URL = 'https://api.themoviedb.org/3'
+export const BASE_URL = 'http://api.weatherstack.com/'
 
-export const MOVIES  = '/discover/movie'
+export const ACCESS_KEY = '9170eb3a72675152ffdd54ff7d74fde0'
 
-export const GENRES = '/genre/movie/list'
-
-export const FILTERS = '&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1'
+export const CallAPI  = axios.create({
+    baseURL: BASE_URL,
+    method: "GET",
+}) 
