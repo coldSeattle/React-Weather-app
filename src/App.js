@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // const process = require('process');
 import './App.scss'
-import { CallAPI, ACCESS_KEY } from './utils/api'
+import { CallAPI, KEY } from './utils/api'
 import WeatherUI from './Weather/WeatherUI';
 
 
@@ -11,17 +11,30 @@ const App = () => {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
 
+    // headers: {'Access-Control-Allow-Origin': 'http://localhost:3000'},
     const getWeatherHandler = async e => {
         try {
             setLoading(true)
 
-            await CallAPI.get('/current', {
+            await CallAPI.get('weather/point', {
+                headers: {
+                    'Authorization': 'example-api-key'
+                  },
+                // auth: ACCESS_KEY,
+                // proxy: {
+                //     host: 'localhost',
+                //     port: 3000
+                //   },
                 params: {
-                    access_key: ACCESS_KEY,
-                    query: cityName
+                    key: KEY,
+                    lang: 'ru',
+                    city: cityName,
+                    
                 }})
                 .then(res => {
                         setWeather([res.data])
+                        console.log(res.data);
+                        
                     })
 
             setCityName('')
@@ -33,7 +46,8 @@ const App = () => {
 
     }
 
-
+    console.log(Weather);
+    
 
     return (
         <div className='app'>
