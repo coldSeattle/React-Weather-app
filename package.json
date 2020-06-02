@@ -1,5 +1,6 @@
 {
   "name": "kino-afisha",
+  "homepage": "https://coldSeattle.github.io/react-weather-app.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +23,8 @@
     "yup": "^0.28.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "set NODE_ENV=production react-scripts build",
     "test": "react-scripts test",
@@ -45,6 +48,7 @@
   "devDependencies": {
     "classnames": "^2.2.6",
     "cross-env": "^7.0.2",
+    "gh-pages": "^3.0.0",
     "prop-types": "^15.7.2",
     "reselect": "^4.0.0"
   }
